@@ -18,7 +18,7 @@ const chartCanvas = ref(null);
 
 onMounted(async () => {
   try {
-    const response = await fetch("http://localhost:3000/attendancetime");
+    const response = await fetch("https://hris-json-server.fly.dev/attendancetime");
     commute.value = await response.json();
     drawChart(); 
   } catch (error) {
