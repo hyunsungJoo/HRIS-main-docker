@@ -2,56 +2,31 @@
   <div class="py-4 container-fluid">
     <div class="row">
       <!-- rahee -->
-      <Attendance/>
+      <Attendance />
     </div>
 
     <div class="row">
       <div class="col-lg-12">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.money.title"
-              :value="stats.money.value"
-              :percentage="stats.money.percentage"
-              :iconClass="stats.money.iconClass"
-              :iconBackground="stats.money.iconBackground"
-              :detail="stats.money.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.money.title" :value="stats.money.value" :percentage="stats.money.percentage"
+              :iconClass="stats.money.iconClass" :iconBackground="stats.money.iconBackground" :detail="stats.money.detail"
+              directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.users.title"
-              :value="stats.users.value"
-              :percentage="stats.users.percentage"
-              :iconClass="stats.users.iconClass"
-              :iconBackground="stats.users.iconBackground"
-              :detail="stats.users.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.users.title" :value="stats.users.value" :percentage="stats.users.percentage"
+              :iconClass="stats.users.iconClass" :iconBackground="stats.users.iconBackground" :detail="stats.users.detail"
+              directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.clients.title"
-              :value="stats.clients.value"
-              :percentage="stats.clients.percentage"
-              :iconClass="stats.clients.iconClass"
-              :iconBackground="stats.clients.iconBackground"
-              :percentageColor="stats.clients.percentageColor"
-              :detail="stats.clients.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.clients.title" :value="stats.clients.value" :percentage="stats.clients.percentage"
+              :iconClass="stats.clients.iconClass" :iconBackground="stats.clients.iconBackground"
+              :percentageColor="stats.clients.percentageColor" :detail="stats.clients.detail" directionReverse></card>
           </div>
           <div class="col-lg-3 col-md-6 col-12">
-            <card
-              :title="stats.sales.title"
-              :value="stats.sales.value"
-              :percentage="stats.sales.percentage"
-              :iconClass="stats.sales.iconClass"
-              :iconBackground="stats.sales.iconBackground"
-              :detail="stats.sales.detail"
-              directionReverse
-            ></card>
+            <card :title="stats.sales.title" :value="stats.sales.value" :percentage="stats.sales.percentage"
+              :iconClass="stats.sales.iconClass" :iconBackground="stats.sales.iconBackground" :detail="stats.sales.detail"
+              directionReverse></card>
           </div>
         </div>
         <div class="row">
@@ -113,7 +88,7 @@
             </div>
           </div>
           <div class="col-lg-5">
-            <categories-card />
+            <Yjinlee />
           </div>
         </div>
       </div>
@@ -124,13 +99,14 @@
 import Card from "@/examples/Cards/Card.vue";
 import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
 import Carousel from "./components/Carousel.vue";
-import CategoriesCard from "./components/CategoriesCard.vue";
 import Attendance from "./components/Attendance.vue";
 
 import US from "@/assets/img/icons/flags/US.png";
 import DE from "@/assets/img/icons/flags/DE.png";
 import GB from "@/assets/img/icons/flags/GB.png";
 import BR from "@/assets/img/icons/flags/BR.png";
+
+import Yjinlee from "@/components/yjin.vue"
 
 export default {
   name: "dashboard-default",
@@ -207,7 +183,7 @@ export default {
     Card,
     GradientLineChart,
     Carousel,
-    CategoriesCard,
+    Yjinlee,
     Attendance
   },
 };
