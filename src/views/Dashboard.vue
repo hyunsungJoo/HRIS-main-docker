@@ -53,7 +53,7 @@
           <div class="col-lg-7 mb-lg">
             <!-- line chart -->
             <div class="card z-index-2">
-              <gradient-line-chart />
+              <Commute />
             </div>
           </div>
           <div class="col-lg-5">
@@ -117,9 +117,9 @@
 </template>
 <script>
 import Card from "@/examples/Cards/Card.vue";
-import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
 import Carousel from "./components/Carousel.vue";
 import CategoriesCard from "./components/CategoriesCard.vue";
+import Commute from "./components/Commute.vue";
 
 import US from "@/assets/img/icons/flags/US.png";
 import DE from "@/assets/img/icons/flags/DE.png";
@@ -199,9 +199,9 @@ export default {
   },
   components: {
     Card,
-    GradientLineChart,
     Carousel,
     CategoriesCard,
+    Commute,
   },
 };
 </script>
