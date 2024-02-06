@@ -7,10 +7,9 @@
 					<div class="contentClass">
 						<div class="numbers">
 							<p class="mb-0 text-sm text-uppercase font-weight-bold">Today</p>
-							<p>{{ getTodayDate() }}</p>
-							<!-- <div v-for="(attendancetime, index) in attendancetimes" :key="index">
-								<h5 class="font-weight-bolder">{{ attendancetime.date }}</h5>
-							</div> -->
+							<div>
+								<h5 class="font-weight-bolder">{{ getTodayDate()  }}</h5>
+							</div>
 						</div>
 					</div>
 				</div>
