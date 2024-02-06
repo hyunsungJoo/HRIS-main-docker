@@ -31,7 +31,7 @@ const departments = ref([]);
 
 onMounted(async () => {
   try {
-    const response = await fetch("http://localhost:3000/departmentalSales");
+    const response = await fetch("https://hris-json-server.fly.dev/departmentalSales");
     departments.value = await response.json();
   } catch (error) {
     console.error("Error fetching data:", error);
