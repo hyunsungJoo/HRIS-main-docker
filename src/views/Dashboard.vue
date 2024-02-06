@@ -30,10 +30,10 @@
           </div>
         </div>
         <div class="row">
+	        <!-- dana -->
           <div class="col-lg-7 mb-lg">
-            <!-- line chart -->
             <div class="card z-index-2">
-              <Commute />
+              <Commute title="Commute Title" description="Commute Description" />
             </div>
           </div>
           <div class="col-lg-5">

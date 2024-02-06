@@ -1,25 +1,115 @@
 <template>
   <div class="card">
     <div class="pb-0 card-header mb-0">
-      <h6>{{ '시간별 출근 기록' }}</h6> 
+      <h6>{{ '시간별 출근 기록' }}</h6>
     </div>
     <div class="p-3 card-body">
-	<canvas id="chart-line" class="chart-canvas" height="300"></canvas>
+      <canvas ref="chartCanvas" class="chart-canvas" height="300"></canvas>
     </div>
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from 'vue';
+import Chart from "chart.js/auto";
 
 const commute = ref([]);
+const chartCanvas = ref(null);
 
 onMounted(async () => {
   try {
     const response = await fetch("http://localhost:3000/attendancetime");
     commute.value = await response.json();
+    drawChart(); 
   } catch (error) {
     console.error("Error fetching data:", error);
   }
 });
+
+const drawChart = () => {
+  const canvas = chartCanvas.value;
+  if (!canvas || !canvas.getContext) return;
+
+  const ctx = canvas.getContext("2d");
+  const gradientStroke = ctx.createLinearGradient(0, 230, 0, 50);
+
+  gradientStroke.addColorStop(1, "rgba(94, 114, 228, 0.2)");
+  gradientStroke.addColorStop(0.2, "rgba(94, 114, 228, 0.0)");
+  gradientStroke.addColorStop(0, "rgba(94, 114, 228, 0)");
+
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: commute.value.map(item => item.label),
+      datasets: [
+        {
+          label: "출근 시간",
+          tension: 0.4,
+          borderWidth: 3,
+          pointRadius: 0,
+          borderColor: "#4BB543 ",
+          backgroundColor: gradientStroke,
+          fill: true,
+          data: commute.value.map(item => item.value),
+          maxBarThickness: 6,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: false,
+        },
+      },
+      interaction: {
+        intersect: false,
+        mode: "index",
+      },
+      scales: {
+        y: {
+          grid: {
+            drawBorder: false,
+            display: true,
+            drawOnChartArea: true,
+            drawTicks: false,
+            borderDash: [5, 5],
+          },
+          ticks: {
+            display: true,
+            padding: 10,
+            color: "#fbfbfb",
+            font: {
+              size: 11,
+              family: "Open Sans",
+              style: "normal",
+              lineHeight: 2,
+            },
+          },
+        },
+        x: {
+          grid: {
+            drawBorder: false,
+            display: false,
+            drawOnChartArea: false,
+            drawTicks: false,
+            borderDash: [5, 5],
+          },
+          ticks: {
+            display: true,
+            color: "#ccc",
+            padding: 20,
+            font: {
+              size: 11,
+              family: "Open Sans",
+              style: "normal",
+              lineHeight: 2,
+            },
+          },
+        },
+      },
+    },
+  });
+};
 </script>
