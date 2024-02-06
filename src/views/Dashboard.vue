@@ -1,6 +1,9 @@
 <template>
   <div class="py-4 container-fluid">
     <div class="row">
+      <Attendance/>
+    </div>
+    <div class="row">
       <div class="col-lg-12">
         <div class="row">
           <div class="col-lg-3 col-md-6 col-12">
@@ -120,6 +123,7 @@ import Card from "@/examples/Cards/Card.vue";
 import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
 import Carousel from "./components/Carousel.vue";
 import CategoriesCard from "./components/CategoriesCard.vue";
+import Attendance from "./components/Attendance.vue";
 
 import US from "@/assets/img/icons/flags/US.png";
 import DE from "@/assets/img/icons/flags/DE.png";
@@ -202,6 +206,7 @@ export default {
     GradientLineChart,
     Carousel,
     CategoriesCard,
+    Attendance
   },
 };
 </script>
