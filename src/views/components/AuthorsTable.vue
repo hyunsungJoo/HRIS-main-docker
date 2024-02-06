@@ -244,3 +244,17 @@ export default {
   name: "authors-table",
 };
 </script>
+<script setup>
+import { ref, onMounted } from 'vue';
+
+const employees = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await fetch("https://hris-json-server.fly.dev/employees");
+    employees.value = await response.json();
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+});
+</script>
