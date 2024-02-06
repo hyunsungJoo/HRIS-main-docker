@@ -55,6 +55,15 @@ import Navbar from "@/examples/Navbars/Navbar.vue";
 import AppFooter from "@/examples/Footer.vue";
 import { mapMutations } from "vuex";
 
+async function jsons() {
+        const response = await fetch("http://localhost:3000/employees");
+        const jsonData = await response.json();
+        console.log(jsonData);
+        return jsonData
+}
+
+jsons();
+
 export default {
   name: "App",
   components: {
