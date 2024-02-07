@@ -50,6 +50,24 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="col-lg-3 col-md-6 col-12">
+		<div class="mb-4 card">
+			<div class="p-3 card-body">
+				<div class="d-flex flex-row-reverse justify-content-between">
+					<div></div>
+					<div class="contentClass">
+						<div class="numbers">
+							<p class="mb-0 text-sm text-uppercase font-weight-bold"></p>
+							<div>
+								<h5 class="font-weight-bolder"></h5>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
 <script setup>
 	import { ref, onMounted } from 'vue';

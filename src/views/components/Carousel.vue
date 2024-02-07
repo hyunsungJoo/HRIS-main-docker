@@ -11,8 +11,8 @@
             <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
               <i class="ni ni-camera-compact text-dark opacity-10"></i>
             </div>
-            <h5 class="text-white mb-1">Get started with Argon</h5>
-            <p>There’s nothing I really wanted to do in life that I wasn’t able to get good at.</p>
+            <h5 class="text-white mb-1">인사부</h5>
+            <p>좋은 하루되세요!</p>
           </div>
         </div>
         <div
@@ -24,8 +24,8 @@
             <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
               <i class="ni ni-bulb-61 text-dark opacity-10"></i>
             </div>
-            <h5 class="text-white mb-1">Faster way to create web pages</h5>
-            <p>That’s my skill. I’m not really specifically talented at anything except for the ability to learn.</p>
+            <h5 class="text-white mb-1">부서별</h5>
+            <p>부서별 급여와 성과 리스트를 확인할 수 있습니다.<br/>개인정보보안에 유의해주세요!</p>
           </div>
         </div>
         <div
@@ -37,8 +37,8 @@
             <div class="icon icon-shape icon-sm bg-white text-center border-radius-md mb-3">
               <i class="ni ni-trophy text-dark opacity-10"></i>
             </div>
-            <h5 class="text-white mb-1">Share with us your design tips!</h5>
-            <p>Don’t be afraid to be wrong because you can’t learn anything from a compliment.</p>
+            <h5 class="text-white mb-1">사원리스트</h5>
+            <p>전체 사원 리스트가 보여집니다.</p>
           </div>
         </div>
       </div>
