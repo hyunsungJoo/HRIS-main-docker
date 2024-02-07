@@ -19,6 +19,11 @@
           </div>
         </div>
         <div class="row mt-4">
+          <div class="col-12">
+            <Yjinlee2 />
+          </div>
+        </div>
+        <div class="row mt-4">
           <div class="col-lg-7 mb-lg">
             <Joo />
           </div>
@@ -26,7 +31,7 @@
             <Yjinlee />
           </div>
         </div>
-        <Yjinlee2 />
+
       </div>
     </div>
 
