@@ -24,7 +24,6 @@ $ npm run serve
 |Mathod|URL|
 |---|---|
 |firebase|https://workflow-ease-123.web.app/dashboard-default|
-|fly.io|https://hris-json-server.fly.dev/|
 <Br>
 
 ## Licensing
