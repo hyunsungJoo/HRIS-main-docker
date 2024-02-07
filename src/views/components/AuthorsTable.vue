@@ -5,13 +5,19 @@
     </div>
 
     <div class="card-body px-0 pt-0 pb-2">
-      <div class=" pb-5 w-50" style="margin: 0 auto;">
+      <div class="pb-5 w-50" style="margin: 0 auto;">
         <div class="input-group">
           <span class="input-group-text text-body">
             <i class="fas fa-search" aria-hidden="true"></i>
           </span>
           <input type="text" class="form-control input" @keyup="searchEmployee($event.target.value)" placeholder="이름을 입력해주세요." />
         </div>
+      </div>
+
+      <div class="d-flex justify-content-end">
+        <button class="btn btn-primary" @click="toggleSortOrder()">
+          {{ sortOrder === 'asc' ? '오래된 순서' : '최신 순서' }}
+        </button>
       </div>
 
       <div class="table-responsive p-0">
@@ -55,18 +61,12 @@
     </div>
   </div>
 </template>
-
-
-<script>
-// export default {
-//   name: "authors-table",
-// };
-</script>
 <script setup>
 import { ref, onMounted } from 'vue';
 
 const employees = ref([]);
 const filteredEmployees = ref([]);
+const sortOrder = ref('asc'); // 초기 정렬 순서
 
 onMounted(async () => {
   try {
@@ -81,7 +81,6 @@ onMounted(async () => {
   }
 });
 
-
 // eslint-disable-next-line no-unused-vars
 function searchEmployee(keyword){
   filteredEmployees.value = employees.value.filter(employee =>
@@ -89,8 +88,22 @@ function searchEmployee(keyword){
   );
 }
 
+// eslint-disable-next-line no-unused-vars
+function toggleSortOrder() {
+  sortOrder.value = sortOrder.value === 'asc' ? 'desc' : 'asc';
+  sortEmployees();
+}
+
+// eslint-disable-next-line no-unused-vars
+function sortEmployees() {
+  if (sortOrder.value === 'asc') {
+    filteredEmployees.value.sort((a, b) => new Date(a.hireDate) - new Date(b.hireDate));
+  } else {
+    filteredEmployees.value.sort((a, b) => new Date(b.hireDate) - new Date(a.hireDate));
+  }
+}
 </script>
 
 <style scoped>
-.card{ min-height: 500px; }
+.card { min-height: 500px; }
 </style>
