@@ -8,7 +8,7 @@
           </div>
         </div>
         <div class="table-responsive">
-          <table class="table align-items-center">
+          <table class="table text-center">
             <thead>
               <tr>
                 <th>직급</th>
@@ -18,7 +18,7 @@
             <tbody>
               <tr v-for="(item, index) in positionAverages" :key="index">
                 <td>{{ item.position }}</td>
-                <td>{{ item.averageSalary.toFixed(2) }}</td>
+                <td>${{ item.averageSalary.toFixed(2) }}</td> <!-- 수정된 부분 -->
               </tr>
             </tbody>
           </table>
