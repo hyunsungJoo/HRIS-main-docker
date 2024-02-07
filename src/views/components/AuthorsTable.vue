@@ -90,3 +90,7 @@ function searchEmployee(keyword){
 }
 
 </script>
+
+<style scoped>
+.card{ min-height: 500px; }
+</style>
