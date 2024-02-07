@@ -1,11 +1,16 @@
 
-### 
+## Run
 ```bash
 $ npm run serve
 ```
+<Br>
 
-### URL
-- https://workflow-ease-123.web.app/dashboard-default
+## How to Deploy
+|Mathod|URL|
+|---|---|
+|firebase|https://workflow-ease-123.web.app/dashboard-default|
+|fly.io|https://hris-json-server.fly.dev/|
+<Br>
 
 ## Licensing
 
