@@ -19,6 +19,11 @@
           </div>
         </div>
         <div class="row mt-4">
+          <div class="col-12">
+            <Yjinlee2 />
+          </div>
+        </div>
+        <div class="row mt-4">
           <div class="col-lg-7 mb-lg">
             <Joo />
           </div>
@@ -26,10 +31,11 @@
             <Yjinlee />
           </div>
         </div>
+
       </div>
     </div>
 
-    <div class="row py-4" >
+    <div class="row py-4">
       <div class="col-12">
         <authors-table />
       </div>
@@ -49,6 +55,7 @@ import GB from "@/assets/img/icons/flags/GB.png";
 import BR from "@/assets/img/icons/flags/BR.png";
 
 import Yjinlee from "@/components/yjin.vue"
+import Yjinlee2 from "@/components/yjin2.vue"
 
 export default {
   name: "dashboard-default",
@@ -90,6 +97,7 @@ export default {
   components: {
     Carousel,
     Yjinlee,
+    Yjinlee2,
     Attendance,
     Joo,
     Commute,
