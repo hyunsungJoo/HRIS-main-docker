@@ -10,7 +10,7 @@
       this.$store.state.isRTL
         ? 'me-3 rotate-caret fixed-end'
         : 'fixed-start ms-3'
-    } 
+    }
     ${
       this.$store.state.layout === 'landing'
         ? 'bg-transparent shadow-none'
@@ -34,8 +34,12 @@
           "
           class="navbar-brand-img h-100"
           alt="main_logo"
+
+          style="display:none;"
         />
-        <span class="ms-2 font-weight-bold me-2">Argon Dashboard 2</span>
+
+        <img src="../../assets/img/small-logos/workflow-logo.png" class="navbar-brand-img h-100" alt="">
+        <span class="ms-2 font-weight-bold me-2">WorkFlowEase</span>
       </router-link>
     </div>
     <hr class="mt-0 horizontal dark" />
