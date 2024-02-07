@@ -11,7 +11,7 @@
           <div class="col-lg-7 mb-lg">
             <!-- line chart -->
             <div class="card z-index-2">
-              <Commute title="Commute Title" description="Commute Description" />
+              <Commute />
             </div>
           </div>
           <div class="col-lg-5">
